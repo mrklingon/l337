@@ -97,15 +97,23 @@ let star4 = images.createBigImage(`
     . . . . # . # . . .
     . . # . . . . . . #
     `)
-let Star5 = images.createBigImage(`
+let star5 = images.createBigImage(`
     . . . . . # . . . .
     . . # # . . . . . .
     . # . . . . # . # .
     . . # . . . . . . .
     . . . . . # . . . .
     `)
-stellas = [star1, star2, star3, star4, Star5]
+let star6 = images.createBigImage(`
+    . . # . . # . . . .
+    . . . . . . # . . .
+    . . # . . . . . . .
+    . . . . . . # . . .
+    . . . # . . . . . .
+    `)
+stellas = [star1, star2, star3, star4, star5, star6]
 for (let value of stellas) {
     value.scrollImage(1, 200)
 }
 current = 0
+stellas[0].scrollImage(1, 200)
