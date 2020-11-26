@@ -1,9 +1,6 @@
 input.onButtonPressed(Button.A, function () {
     stellas[current].scrollImage(1, 200)
 })
-input.onGesture(Gesture.TiltLeft, function () {
-    stellas[current].scrollImage(-1, 200)
-})
 function Hyper () {
     L3.showImage(0)
     basic.pause(100)
@@ -46,9 +43,6 @@ input.onButtonPressed(Button.B, function () {
 input.onGesture(Gesture.Shake, function () {
     Hyper()
     current = randint(0, stellas.length - 1)
-    stellas[current].scrollImage(1, 200)
-})
-input.onGesture(Gesture.TiltRight, function () {
     stellas[current].scrollImage(1, 200)
 })
 let current = 0
