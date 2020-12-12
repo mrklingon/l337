@@ -4,6 +4,7 @@ input.onButtonPressed(Button.A, function () {
 })
 function Hyper () {
     L3.showImage(0)
+    music.playMelody("C G F E D C5 G - ", 120)
     basic.pause(100)
     for (let index = 0; index < 4; index++) {
         basic.showLeds(`
