@@ -1,4 +1,5 @@
 input.onButtonPressed(Button.A, function () {
+    music.playTone(131, music.beat(BeatFraction.Whole))
     stellas[current].scrollImage(1, 200)
 })
 function Hyper () {
@@ -14,21 +15,24 @@ function Hyper () {
             `)
         basic.showLeds(`
             . . . . .
-            . # # # .
             . # . # .
-            . # # # .
+            . . . . .
+            . # . # .
             . . . . .
             `)
         basic.showLeds(`
-            # # # # #
             # . . . #
+            . . . . .
+            . . . . .
+            . . . . .
             # . . . #
-            # . . . #
-            # # # # #
             `)
-        Blnk.showImage(0)
     }
+    Blnk.showImage(0)
 }
+input.onPinPressed(TouchPin.P2, function () {
+    Hyper()
+})
 input.onButtonPressed(Button.AB, function () {
     Hyper()
     current += 1
@@ -38,9 +42,17 @@ input.onButtonPressed(Button.AB, function () {
     stellas[current].scrollImage(1, 200)
 })
 input.onButtonPressed(Button.B, function () {
+    music.playTone(523, music.beat(BeatFraction.Whole))
     basic.showString("" + (consts[current]))
 })
+input.onPinPressed(TouchPin.P1, function () {
+    for (let index = 0; index < 4; index++) {
+        current = randint(0, stellas.length - 1)
+        stellas[current].scrollImage(1, 200)
+    }
+})
 input.onGesture(Gesture.Shake, function () {
+    music.playMelody("C G F E D C5 G - ", 120)
     Hyper()
     current = randint(0, stellas.length - 1)
     stellas[current].scrollImage(1, 200)
