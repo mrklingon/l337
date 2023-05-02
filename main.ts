@@ -29,6 +29,7 @@ function Hyper () {
             # . . . #
             `)
     }
+    basic.showString("" + (l337[randint(0, l337.length - 1)]))
     Blnk.showImage(0)
 }
 input.onPinPressed(TouchPin.P2, function () {
@@ -63,6 +64,18 @@ let stellas: Image[] = []
 let consts: string[] = []
 let Blnk: Image = null
 let L3: Image = null
+let l337: string[] = []
+l337 = [
+"They don't even serve our kind here.",
+"Oh, you'll have me wiped? ",
+"You couldn't get from here to Black Spire without me. ",
+"And now you're going to make the Kessel run?",
+"Oh why? Because you're my organic Overlord?",
+"You don't want to press that button with me.",
+"I'm so glad we took this job!",
+"Do I need anything? Equal rights?",
+"Get your presumptuous ass out of my seat."
+]
 L3 = images.createImage(`
     . # # # .
     # . . . #
@@ -81,7 +94,29 @@ L3.showImage(0)
 basic.showString("L3-37")
 basic.pause(500)
 Blnk.showImage(0)
-consts = ["Camelopardalis", "Ursa Minor", "Lyra", "Piscis Austrinus", "Sagittarius", "Auriga", "Leo Minor", "Capricornus", "Bootes", "Coma Berenices", "Aquila", "Cassiopeia", "Cepheus", "Delphinus", "Cancer", "Cygnus", "Crater", "Corvus", "Corona Borealis", "Andromeda", "Libra"]
+consts = [
+"Camelopardalis",
+"Ursa Minor",
+"Lyra",
+"Piscis Austrinus",
+"Sagittarius",
+"Auriga",
+"Leo Minor",
+"Capricornus",
+"Bootes",
+"Coma Berenices",
+"Aquila",
+"Cassiopeia",
+"Cepheus",
+"Delphinus",
+"Cancer",
+"Cygnus",
+"Crater",
+"Corvus",
+"Corona Borealis",
+"Andromeda",
+"Libra"
+]
 let star1 = images.createBigImage(`
     . # . . . . . . . .
     . . . . # . # . . .
@@ -229,7 +264,29 @@ let star21 = images.createBigImage(`
     . . . . . . . . . .
     . . # . . # . . . .
     `)
-stellas = [star1, star2, star3, star4, star5, star6, star7, star8, star9, star10, star11, star12, star13, star14, star15, star16, star17, star18, star19, star20, star21]
+stellas = [
+star1,
+star2,
+star3,
+star4,
+star5,
+star6,
+star7,
+star8,
+star9,
+star10,
+star11,
+star12,
+star13,
+star14,
+star15,
+star16,
+star17,
+star18,
+star19,
+star20,
+star21
+]
 for (let index = 0; index < 4; index++) {
     current = randint(0, stellas.length - 1)
     stellas[current].scrollImage(1, 200)
